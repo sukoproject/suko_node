@@ -9,7 +9,7 @@ module.exports = function(router) {
 		console.log(currentVersion);
     	res.json(currentVersion);
     });
-
+/*
     // Get all tasks
     router.get('/tasks', function (req, res, next) {
 		tasks.getAll().then(function(datas){
@@ -34,6 +34,13 @@ module.exports = function(router) {
     // Update a task
     router.put('/tasks/', function (req, res) {
         tasks.update(req.body).then(function(datas){
+            res.json(datas);
+        });
+    });
+*/
+    // get 
+    router.get('/analyser', function (req, res, next) {
+        tasks.getAll().then(function(datas){
             res.json(datas);
         });
     });
